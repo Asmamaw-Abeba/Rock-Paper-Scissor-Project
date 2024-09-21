@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Add-event-listener-method</title>
+	<link rel="stylesheet" type="text/css" href="RPS.css">
+</head>
+<body>
+	<p class="title">Rock Paper Scissores</p>
+	<button onclick="
+	 	playGame('rock');
+	" class="move-button js-rock-buttom"><img src="images/rock.png" class="move-icon"></button>
+
+	<button onclick="
+       playGame('paper');
+	" class="move-button js-paper-buttom"><img src="images/paper.png" class="move-icon"></button>
+
+	<button onclick="
+     	playGame('scissors');  
+	" class="move-button js-scissors-buttom"><img src="images/scissors.png" class="move-icon"></button>
+     
+     <p class="js-result result center"></p>
+     <p class="js-moves center"></p>
+     <p class="js-score score center"></p>
+
+
+	<button onclick="
+		score.wins = 0;
+		score.losses = 0;
+		score.ties = 0;
+        localStorage.removeItem('score');
+        updateScore();
+
+	" class="reset-score-button center">Reset score</button>
+	<button class="auto-play-button" onclick="autoplay();">Auto Play</button>
+
+	<script language="JavaScript" src="RPS.JS"></script>
+
+
+
+<!-- <script>
+	setTimeout(function () {
+		console.log('timeout');
+	}, 3000);
+
+	console.log('next line1');
+
+	setInterval(function () {
+		console.log('interval');
+	}, 3000);
+
+	console.log('next line2');
+</script> -->
+</body>
+</html>
